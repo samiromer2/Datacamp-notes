@@ -260,3 +260,21 @@ plt.show()
 # The countries in blue, corresponding to Africa, have both low life expectancy and a low GDP per capita. (this one)
 # There is a negative correlation between GDP per capita and life expectancy.
 # China has both a lower GDP per capita and lower life expectancy compared to India.
+
+
+import pandas as pd 
+brics = pd.read_csv('brics.csv', index_col=0)
+brics
+
+
+#step 1 get column:
+brics["area"]
+# or
+# brics.loc[:, "area"]
+# brics.iloc[:, 2]
+
+
+is_huge = brics["area"] > 8
+
+brics[is_huge]
+
